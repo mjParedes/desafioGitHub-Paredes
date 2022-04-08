@@ -89,10 +89,133 @@ nav ul li a:hover{
     font-weight: bolder;
     font-family: Candara;
 }
+
+/*Gradientes a Page Products*/
+.gradientes{
+    display:none;
+}
+
+/*Agrego animaciones para proyecto*/
+.animaciones{
+    display:flex;
+    flex-direction: column;
+    flex-wrap:nowrap;
+    justify-content: center;
+    align-items:center;
+    margin-top: 5rem;
+}
+
+.animaciones div{
+    margin:20px ;
+    animation-name: girar_planeta;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+    animation-duration:12s;
+    animation-delay: 1s;
+}
+
+.animaciones div img{
+    width: 180px;
+    height: 180px;
+    max-width: 100%;
+    max-height: 100%;
+}
     
+@keyframes girar_planeta {
+    0%{transform:rotate(0deg);
+    }
+    100%{transform:rotate(360deg)
+    }
+}
+
+
 .main{
     grid-area: main;
     background-color: #B8FFF9; 
+}
+
+/*Agrego transiciones al proyecto*/
+.transiciones>*{
+    margin: 20px;
+
+}
+
+.transicion-1{
+    width:150px;
+    height:150px;
+    background-color: blue;
+    transition: width 2s;
+}
+
+.transicion-2{
+    width:200px;
+    height:200px;
+    background-color: blue;
+    transition: width 2s;
+}
+
+.transicion-3{
+    width:250px;
+    height:250px;
+    background-color: blue;
+    transition: width 2s;
+}
+
+.transicion-1:hover{
+    width:65vw;
+    background-color: red;
+    border: 2px solid #000;
+}
+
+.transicion-2:hover{
+    width:70vw;
+    background-color: green;
+    border: 2px solid #000;
+}
+
+.transicion-3:hover{
+    width:75vw;
+    background-color: darkorchid;
+    border: 2px solid #000;
+}
+
+/*transformaciones*/
+.transformaciones{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    margin-top:20px;
+    background: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);
+    padding: 20px;
+}
+
+.transformaciones > *{
+    margin: 30px;
+}
+
+.transformaciones div{
+    width:200px;
+    height:100px;
+    background-color:slateblue;
+    border: 2px solid #000;
+    color: whitesmoke;
+}
+
+.div-r{
+    transform: rotate(20deg) ;
+}
+
+.div-t{
+    transform:translate(60px, 30px) ;
+}
+
+.div-s{
+    transform:skew(10deg, 5deg) ;
+}
+
+.div-sc{
+    transform:scale(1.5);
 }
 
 /*Doy estilo a page About Us*/
@@ -242,6 +365,46 @@ nav ul li a:hover{
         margin: 1px;
         border-radius: 0.5rem;
     }
+
+    .animaciones{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .animaciones div{
+        margin:25px;
+    }
+
+    .animaciones div img{
+        width:25vw;
+        height: 25vw;
+    }
+
+    .gradientes{
+        display:inline-block;
+        margin: 2rem;
+        width: 60vw;
+        height:30vh;
+    }
+
+    .gradientes div{
+        border: 2px solid #000000;
+        border-radius: 3px;
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .grad1{
+        background:linear-gradient(to left,red, whitesmoke);
+    }
+
+    .grad2{
+        background:radial-gradient(green, yellow);    
+    }
+
+    .grad3{
+        background:linear-gradient(to right,violet, orange);
+    }
 }
 
 @media only screen and (min-width:768px){
@@ -271,6 +434,10 @@ nav ul li a:hover{
 
     .parrafos{
        justify-content:space-around;
+    }
+
+    .animaciones div{
+        margin:30px;
     }
     
 }
@@ -318,5 +485,9 @@ nav ul li a:hover{
     .aside{
         display: flex;
         flex-direction: column;
+    }
+
+    .animaciones div{
+        margin:35px;
     }
 }
